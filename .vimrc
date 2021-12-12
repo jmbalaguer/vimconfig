@@ -9,10 +9,14 @@ set ruler " show the cursor position all the time
 set showmatch " highlight matching braces
 set showmode " show insert/replace/visual mode
 set number " show line numbers
+set nowrap
+set smartindent
 
 " write settings
 set confirm " confirm :q in case of unsaved changes
 set fileencoding=utf-8 " encoding used when saving file
+set fileencodings=ucs-bom,utf-8,latin-1
+
 "set nobackup " do not keep the backup~ file
 set backup " tell vim to keep a backup file
 set backupdir=~/tmp " tell vim where to put its backup files
@@ -20,10 +24,10 @@ set dir=~/tmp " tell vim where to put swap files
 
 " edit settings
 set backspace=indent,eol,start " backspacing over everything in insert mode
-set expandtab " fill tabs with spaces
 set shiftwidth=2 " set indentation depth to 2 columns
 set softtabstop=2 " backspacing over 2 spaces like over tabs
 set tabstop=2 " set tabulator length to 2 columns
+set expandtab " fill tabs with spaces
 
 " search settings
 set hlsearch " highlight search results
@@ -36,9 +40,16 @@ filetype on " enable file type detection
 filetype indent on " automatically indent code
 "filetype plugin on " load the plugins for specific file types
 
+" color scheme
+colorscheme slate 
+colorscheme LightYellow
+colorscheme tomatosoup
+colorscheme darkblue
+colorscheme custom
+colorscheme 256-jungle
+colorscheme wombat256mod 
+
 " syntax highlighting
-"colorscheme slate " set color scheme, must be installed first
-colorscheme wombat256mod " set color scheme, must be installed first
 set background=dark " dark background for console
 syntax enable " enable syntax highlighting
 
@@ -50,6 +61,7 @@ if has('gui_running')
   set background=light " light background for GUI
   set columns=145 lines=45 " GUI window geometry
   set guifont=Monospace\ 12 " font for GUI window
+  set guifont=Lucida_Console:h11 
 endif
 
 " general key mappings
