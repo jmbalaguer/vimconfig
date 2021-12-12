@@ -41,12 +41,12 @@ filetype indent on " automatically indent code
 "filetype plugin on " load the plugins for specific file types
 
 " color scheme
-colorscheme slate 
-colorscheme LightYellow
-colorscheme tomatosoup
-colorscheme darkblue
-colorscheme custom
-colorscheme 256-jungle
+" colorscheme slate 
+" colorscheme LightYellow
+" colorscheme tomatosoup
+" colorscheme darkblue
+" colorscheme custom
+" colorscheme 256-jungle
 colorscheme wombat256mod 
 
 " syntax highlighting
