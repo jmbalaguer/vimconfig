@@ -20,8 +20,8 @@ set fileencodings=ucs-bom,utf-8,latin-1
 
 "set nobackup " do not keep the backup~ file
 set backup " tell vim to keep a backup file
-set backupdir=~/tmp " tell vim where to put its backup files
-set dir=~/tmp " tell vim where to put swap files
+set backupdir=~/tmp " tell vim where to put its backup files (folder must exists)
+set dir=~/tmp " tell vim where to put swap files (folder must exists)
 
 " edit settings
 set backspace=indent,eol,start " backspacing over everything in insert mode
@@ -69,7 +69,7 @@ filetype indent on " automatically indent code
 " colorscheme darkblue
 " colorscheme custom
 " colorscheme 256-jungle
-colorscheme wombat256mod 
+colorscheme breeze
 
 " syntax highlighting
 set background=dark " dark background for console
@@ -98,15 +98,15 @@ endif
 set laststatus=2
 
 " Format the status line
-set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l
+"set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l
 
 
 " Return to last edit position when opening files (You want this!)
 autocmd BufReadPost *
-     \ if line("'\"") > 0 && line("'\"") <= line("$") |
-     \   exe "normal! g`\"" |
-     \ endif
-" Remember info about open buffers on close
+   \ if line("'\"") > 0 && line("'\"") <= line("$") |
+   \   exe "normal! g`\"" |
+   \ endif
+"Remember info about open buffers on close
 set viminfo^=%
 
 
