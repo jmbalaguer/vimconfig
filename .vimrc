@@ -35,8 +35,8 @@ set scrolloff=7 " number of context lines to see above and below the cursor.
 "map 0 ^
 
 " Remaps for the first ans last characters
-"nnoremap B ^ 
-"nnoremap E $ 
+"map B ^ 
+"map E $ 
 
 " Treat long lines as break lines (useful when moving around in them)
 map j gj
@@ -119,8 +119,8 @@ let mapleader=","
 nnoremap <leader><space> :nohlsearch <CR>
 
 " Map <Space> to / (search) and Ctrl-<Space> to ? (backwards search)
-"map <space> /
-"map <c-space> ?
+map <space> /
+map <c-space> ?
 
 " C-c and C-v - Copy/Paste to global clipboard
 " copy works in visual mode!
@@ -138,3 +138,4 @@ inoremap <F4> <Esc>mqggVG=`qzza
 " press F12 to toggle showing the non-printable charactes
 noremap <F12> :set list!<CR>
 inoremap <F12> <Esc>:set list!<CR> 
+
