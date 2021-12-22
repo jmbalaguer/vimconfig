@@ -1,6 +1,7 @@
 " Configuration file for Vim.
 
 " use Vim mode instead of pure Vi, it must be the first instruction
+" This must be first, because it changes other options as side effect
 set nocompatible
 
 " display settings
