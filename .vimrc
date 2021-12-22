@@ -117,6 +117,12 @@ nnoremap <leader><space> :nohlsearch
 "map <space> /
 "map <c-space> ?
 
+" C-c and C-v - Copy/Paste to global clipboard
+" copy works in visual mode!
+" paste works in insert mode!
+vmap <C-c> "+yi
+imap <C-v> <esc>"+gpi
+
 
 " Function key mappings 
 
