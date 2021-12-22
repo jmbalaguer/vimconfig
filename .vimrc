@@ -64,7 +64,11 @@ if has('gui_running')
   set guifont=Lucida_Console:h11 
 endif
 
-" general key mappings
+" General key mappings
+
+" Map <Space> to / (search) and Ctrl-<Space> to ? (backwards search)
+map <space> /
+map <c-space> ?
 
 " press F4 to fix indentation in whole file; overwrites marker 'q' position
 noremap <F4> mqggVG=`qzz
