@@ -34,6 +34,12 @@ set scrolloff=7 " number of context lines to see above and below the cursor.
 map j gj
 map k gk
 
+" Smart way to move between windows
+map <C-j> <C-W>j
+map <C-k> <C-W>k
+map <C-h> <C-W>h
+map <C-l> <C-W>l
+
 " search settings
 set hlsearch " highlight search results
 set ignorecase " do case insensitive search...
