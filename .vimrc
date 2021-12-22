@@ -105,20 +105,24 @@ autocmd BufReadPost *
 set viminfo^=%
 
 
-
 " General key mappings
+
+" Change the mapleader from \ to ,
+let mapleader=","
+
+" Turn the search results highlight off
+nnoremap <leader><space> :nohlsearch
 
 " Map <Space> to / (search) and Ctrl-<Space> to ? (backwards search)
 "map <space> /
 "map <c-space> ?
 
+
+" Function key mappings 
+
 " press F4 to fix indentation in whole file; overwrites marker 'q' position
 noremap <F4> mqggVG=`qzz
 inoremap <F4> <Esc>mqggVG=`qzza
-
-" press F8 to turn the search results highlight off
-noremap <F8> :nohl<CR>
-inoremap <F8> <Esc>:nohl<CR>a
 
 " press F12 to toggle showing the non-printable charactes
 noremap <F12> :set list!<CR>
