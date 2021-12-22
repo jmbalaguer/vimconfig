@@ -28,6 +28,7 @@ set shiftwidth=2 " set indentation depth to 2 columns
 set softtabstop=2 " backspacing over 2 spaces like over tabs
 set tabstop=2 " set tabulator length to 2 columns
 set expandtab " fill tabs with spaces
+set scrolloff=7 " number of context lines to see above and below the cursor.
 
 " search settings
 set hlsearch " highlight search results
@@ -67,8 +68,8 @@ endif
 " General key mappings
 
 " Map <Space> to / (search) and Ctrl-<Space> to ? (backwards search)
-map <space> /
-map <c-space> ?
+"map <space> /
+"map <c-space> ?
 
 " press F4 to fix indentation in whole file; overwrites marker 'q' position
 noremap <F4> mqggVG=`qzz
