@@ -35,8 +35,8 @@ set scrolloff=7 " number of context lines to see above and below the cursor.
 "map 0 ^
 
 " Remaps for the first ans last characters
-nnoremap B ^ 
-nnoremap E $ 
+"nnoremap B ^ 
+"nnoremap E $ 
 
 " Treat long lines as break lines (useful when moving around in them)
 map j gj
