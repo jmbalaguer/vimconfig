@@ -66,6 +66,8 @@ set novisualbell
 set t_vb=
 set tm=500
 
+set lines=50 columns=150
+
 " tuning for gVim only
 if has('gui_running')
   set background=light " light background for GUI
