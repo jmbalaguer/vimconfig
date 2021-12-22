@@ -66,7 +66,7 @@ set novisualbell
 set t_vb=
 set tm=500
 
-set lines=50 columns=150
+set lines=45 columns=145
 
 " tuning for gVim only
 if has('gui_running')
