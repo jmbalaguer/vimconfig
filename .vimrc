@@ -36,6 +36,9 @@ set ignorecase " do case insensitive search...
 set incsearch " do incremental search
 set smartcase " ...unless capital letters are used
 
+" For regular expressions turn magic on
+set magic
+
 " file type specific settings
 filetype on " enable file type detection
 filetype indent on " automatically indent code
@@ -56,6 +59,12 @@ syntax enable " enable syntax highlighting
 
 " characters for displaying non-printable characters
 set listchars=eol:$,tab:>-,trail:.,nbsp:_,extends:+,precedes:+
+
+" No annoying sound on errors
+set noerrorbells
+set novisualbell
+set t_vb=
+set tm=500
 
 " tuning for gVim only
 if has('gui_running')
