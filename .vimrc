@@ -116,7 +116,7 @@ set viminfo^=%
 let mapleader=","
 
 " Turn the search results highlight off
-nnoremap <leader><space> :nohlsearch
+nnoremap <leader><space> :nohlsearch <CR>
 
 " Map <Space> to / (search) and Ctrl-<Space> to ? (backwards search)
 "map <space> /
