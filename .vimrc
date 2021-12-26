@@ -21,7 +21,7 @@ set fileencodings=ucs-bom,utf-8,latin-1
 "set nobackup " do not keep the backup~ file
 set backup " tell vim to keep a backup file
 set backupdir=~/tmp " tell vim where to put its backup files (folder must exists)
-set dir=~/tmp " tell vim where to put swap files (folder must exists)
+set dir=.,~/tmp " tell vim where to put swap files (folder must exists)
 
 " edit settings
 set backspace=indent,eol,start " backspacing over everything in insert mode
@@ -63,13 +63,7 @@ filetype indent on " automatically indent code
 "filetype plugin on " load the plugins for specific file types
 
 " color scheme
-" colorscheme slate 
-" colorscheme LightYellow
-" colorscheme tomatosoup
-" colorscheme darkblue
-" colorscheme custom
-" colorscheme 256-jungle
-colorscheme breeze
+colorscheme dessert  
 
 " syntax highlighting
 set background=dark " dark background for console
@@ -90,8 +84,8 @@ set lines=45 columns=145
 if has('gui_running')
   set background=light " light background for GUI
   set columns=145 lines=45 " GUI window geometry
-  set guifont=Monospace\ 12 " font for GUI window
-  set guifont=Lucida_Console:h11 
+  "set guifont=Monospace\ 12 " font for GUI window
+  set guifont=Lucida_Console:h14 
 endif
 
 " Always show the status line
