@@ -78,12 +78,12 @@ set novisualbell
 set t_vb=
 set tm=500
 
-set lines=45 columns=145
+set lines=43 columns=130
 
 " tuning for gVim only
 if has('gui_running')
   set background=light " light background for GUI
-  set columns=145 lines=45 " GUI window geometry
+  set columns=145 lines=43 " GUI window geometry
   "set guifont=Monospace\ 12 " font for GUI window
   set guifont=Lucida_Console:h14 
 endif
