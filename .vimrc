@@ -83,9 +83,19 @@ set lines=43 columns=130
 " tuning for gVim only
 if has('gui_running')
   set background=light " light background for GUI
-  set columns=145 lines=43 " GUI window geometry
+  set columns=140 lines=43 " GUI window geometry
+  
   "set guifont=Monospace\ 12 " font for GUI window
-  set guifont=Lucida_Console:h14 
+  "set guifont=Lucida_Console:h14
+  
+  if has("gui_gtk2")
+    set guifont=Inconsolata\ 12
+  elseif has("gui_macvim")
+    set guifont=Menlo\ Regular:h14
+  elseif has("gui_win32")
+    set guifont=Consolas:h11:cANSI
+  endif
+
 endif
 
 " Always show the status line
