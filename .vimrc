@@ -63,7 +63,7 @@ filetype indent on " automatically indent code
 "filetype plugin on " load the plugins for specific file types
 
 " color scheme
-colorscheme dessert  
+colorscheme desert  
 
 " syntax highlighting
 set background=dark " dark background for console
