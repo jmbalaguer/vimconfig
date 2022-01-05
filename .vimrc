@@ -62,11 +62,12 @@ filetype on " enable file type detection
 filetype indent on " automatically indent code
 "filetype plugin on " load the plugins for specific file types
 
+set background=dark " dark background for console
+
 " color scheme
 colorscheme desert  
 
 " syntax highlighting
-set background=dark " dark background for console
 syntax enable " enable syntax highlighting
 
 " characters for displaying non-printable characters
@@ -82,16 +83,16 @@ set lines=43 columns=130
 
 " tuning for gVim only
 if has('gui_running')
-  set background=light " light background for GUI
-  set columns=140 lines=43 " GUI window geometry
+
+  "set background=light " light background for GUI (conflicts with colorscheme!)
+  colorscheme desert  
   
-  "set guifont=Monospace\ 12 " font for GUI window
-  "set guifont=Lucida_Console:h14
-  
+  set columns=140 lines=44 " GUI window geometry
+
   if has("gui_gtk2")
     set guifont=Inconsolata\ 12
   elseif has("gui_macvim")
-    set guifont=Menlo\ Regular:h14
+    set guifont=Menlo\ Regular:h15
   elseif has("gui_win32")
     set guifont=Consolas:h11:cANSI
   endif
@@ -142,4 +143,3 @@ inoremap <F4> <Esc>mqggVG=`qzza
 " press F12 to toggle showing the non-printable charactes
 noremap <F12> :set list!<CR>
 inoremap <F12> <Esc>:set list!<CR> 
-
