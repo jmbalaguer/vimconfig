@@ -65,7 +65,8 @@ filetype indent on " automatically indent code
 set background=dark " dark background for console
 
 " color scheme
-colorscheme desert  
+colorscheme desert 
+colorscheme wombat256mod
 
 " syntax highlighting
 syntax enable " enable syntax highlighting
