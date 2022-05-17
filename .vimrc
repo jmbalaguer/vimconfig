@@ -11,7 +11,7 @@ set showmatch " highlight matching braces
 set showmode " show insert/replace/visual mode
 set number " show line numbers
 set nowrap
-set smartindent
+set smartindent " Better than 'autoindent' 
 
 " write settings
 set confirm " confirm :q in case of unsaved changes
@@ -31,23 +31,6 @@ set tabstop=2 " set tabulator length to 2 columns
 set expandtab " fill tabs with spaces
 set scrolloff=7 " number of context lines to see above and below the cursor.
 
-" Remap 0 to first non-blank character
-"map 0 ^
-
-" Remaps for the first ans last characters
-"map B ^ 
-"map E $ 
-
-" Treat long lines as break lines (useful when moving around in them)
-map j gj
-map k gk
-
-" Smart way to move between windows
-map <C-j> <C-W>j
-map <C-k> <C-W>k
-map <C-h> <C-W>h
-map <C-l> <C-W>l
-
 " search settings
 set hlsearch " highlight search results
 set ignorecase " do case insensitive search...
@@ -62,23 +45,23 @@ filetype on " enable file type detection
 filetype indent on " automatically indent code
 "filetype plugin on " load the plugins for specific file types
 
-set background=dark " dark background for console
-
-" color scheme
-colorscheme desert 
-colorscheme wombat256mod
-
 " syntax highlighting
 syntax enable " enable syntax highlighting
-
-" characters for displaying non-printable characters
-set listchars=eol:$,tab:>-,trail:.,nbsp:_,extends:+,precedes:+
 
 " No annoying sound on errors
 set noerrorbells
 set novisualbell
 set t_vb=
 set tm=500
+
+set background=dark " dark background for console
+
+" color scheme
+colorscheme desert 
+"colorscheme wombat256mod
+
+" characters for displaying non-printable characters
+set listchars=eol:$,tab:>-,trail:.,nbsp:_,extends:+,precedes:+
 
 set lines=43 columns=130
 
@@ -133,6 +116,29 @@ map <c-space> ?
 " paste works in insert mode!
 vmap <C-c> "+yi
 imap <C-v> <esc>"+gpi
+
+" Remap 0 to first non-blank character
+"map 0 ^
+
+" Remaps for the first ans last characters
+"map B ^ 
+"map E $ 
+
+" Treat long lines as break lines (useful when moving around in them)
+map j gj
+map k gk
+
+" Smart way to move between windows
+map <C-j> <C-W>j
+map <C-k> <C-W>k
+map <C-h> <C-W>h
+map <C-l> <C-W>l
+
+" New tab
+nnoremap <C-t> :tabnew<CR>
+
+" Paste from system clipboard with Ctrl+I instead of Shift+Insert 
+map <C-i> <S-Insert>
 
 
 " Function key mappings 
