@@ -89,6 +89,15 @@ set laststatus=2
 " Format the status line
 "set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l
 
+" Highlight the Current Line
+set cursorline
+hi cursorline cterm=none term=none
+"hi CursorLine guibg=#303000 ctermbg=234
+hi CursorLine guibg=Grey25  " Color depends on the current colorscheme
+
+" Highlight the Current Line in the current window only
+autocmd WinEnter * setlocal cursorline
+autocmd WinLeave * setlocal nocursorline
 
 " Return to last edit position when opening files (You want this!)
 autocmd BufReadPost *
