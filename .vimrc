@@ -111,11 +111,14 @@ nnoremap <leader><space> :nohlsearch <CR>
 map <space> /
 map <c-space> ?
 
-" C-c and C-v - Copy/Paste to global clipboard
+" C-c and C-v - Copy/Paste to system clipboard
 " copy works in visual mode!
 " paste works in insert mode!
 vmap <C-c> "+yi
 imap <C-v> <esc>"+gpi
+
+" Paste from system clipboard with Ctrl+I instead of Shift+Insert (gVim only???) 
+map <C-i> <S-Insert>
 
 " Remap 0 to first non-blank character
 "map 0 ^
@@ -136,9 +139,6 @@ map <C-l> <C-W>l
 
 " New tab
 nnoremap <C-t> :tabnew<CR>
-
-" Paste from system clipboard with Ctrl+I instead of Shift+Insert 
-map <C-i> <S-Insert>
 
 
 " Function key mappings 
