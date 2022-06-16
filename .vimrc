@@ -12,6 +12,7 @@ set showmode " show insert/replace/visual mode
 set number " show line numbers
 set nowrap
 set smartindent " Better than 'autoindent' 
+set mouse=a " mouse support
 
 " write settings
 set confirm " confirm :q in case of unsaved changes
