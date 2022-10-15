@@ -25,7 +25,7 @@ set backupdir=~/tmp " tell vim where to put its backup files (folder must exists
 set dir=.,~/tmp " tell vim where to put swap files (folder must exists)
 
 " edit settings
-set backspace=indent,eol,start " backspacing over everything in insert mode
+set backspace=indent,eol,start " backspacing over everything in insert mode (like most programs)
 set shiftwidth=2 " set indentation depth to 2 columns
 set softtabstop=2 " backspacing over 2 spaces like over tabs
 set tabstop=2 " set tabulator length to 2 columns
@@ -117,8 +117,10 @@ let mapleader=","
 " Turn the search results highlight off
 nnoremap <leader><space> :nohlsearch <CR>
 
-" Map <Space> to / (search) and Ctrl-<Space> to ? (backwards search)
-map <space> /
+" Map <Space> to / (search)
+"map <space> /
+
+" Map Ctrl-<Space> to ? (backwards search)
 map <c-space> ?
 
 " C-c and C-v - Copy/Paste to system clipboard
