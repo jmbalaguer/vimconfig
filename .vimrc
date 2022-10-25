@@ -109,7 +109,7 @@ autocmd BufReadPost *
 set viminfo^=%
 
 
-" GENERAL KEY MAPPINGS 
+" GENERAL KEY MAPPINGS ====================================================================================
 
 " Change the mapleader from \ to ,
 let mapleader=","
@@ -158,7 +158,7 @@ nnoremap <C-f> <Esc>:Lex<CR>:vertical resize 30<CR>
 nnoremap <leader>f <Esc>:Lex<CR>:vertical resize 30<CR>     
 
 
-" FUNCTION KEY MAPPINGS  
+" FUNCTION KEY MAPPINGS ===================================================================================  
 
 " press F4 to fix indentation in whole file; overwrites marker 'q' position
 noremap <F4> mqggVG=`qzz
