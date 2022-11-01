@@ -7,7 +7,17 @@ set nocompatible
 " display settings
 set encoding=utf-8 " encoding used for displaying file
 set ruler " show the cursor position all the time
-set showmatch " highlight matching braces
+
+" syntax highlighting
+syntax enable " enable syntax highlighting (is the same as "syntax on"?)
+
+" highlight matching braces
+set showmatch " highlight matching braces 
+set noshowmatch " do not highlight matching braces (it doesn't work!!!) 
+let loaded_matchparen = 1 "prevents the matchparen plugin from loading and highlighting parenthesis!
+hi MatchParen cterm=none ctermbg=black ctermfg=magenta  " It works in execute mode but not in vimrc!?
+hi MatchParen gui=none guibg=black guifg=magenta  " It works in execute mode but not in vimrc!? 
+
 set showmode " show insert/replace/visual mode
 set number " show line numbers
 set nowrap
@@ -45,9 +55,6 @@ set magic
 filetype on " enable file type detection
 filetype indent on " automatically indent code
 "filetype plugin on " load the plugins for specific file types
-
-" syntax highlighting
-syntax enable " enable syntax highlighting
 
 " No annoying sound on errors
 set noerrorbells
