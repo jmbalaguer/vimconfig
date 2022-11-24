@@ -18,4 +18,3 @@ imap <F8>   <Esc>:call SwitchColor(1)<CR>
 
  map <S-F8>      :call SwitchColor(-1)<CR>
 imap <S-F8> <Esc>:call SwitchColor(-1)<CR>
-
