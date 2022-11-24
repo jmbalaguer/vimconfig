@@ -1,9 +1,7 @@
 let s:swindex = 0
 let s:swcolors =  []  
-let s:swcolors += ['blue', 'darkblue', 'delek', 'desert', 'elflord']  
-let s:swcolors += ['evening', 'industry', 'koehler', 'morning',] 
-let s:swcolors += ['murphy', 'pablo', 'peachpuff', 'ron', 'shine'] 
-let s:swcolors += ['slate', 'torte', 'zellner'] 
+let s:swcolors += ['blue', 'darkblue', 'delek', 'desert', 'elflord','evening', 'industry', 'koehler', 'morning'] 
+let s:swcolors += ['murphy', 'pablo', 'peachpuff', 'ron', 'shine', 'slate', 'torte', 'zellner'] 
 
 function! SwitchColor(swinc)
   let s:swindex += a:swinc
