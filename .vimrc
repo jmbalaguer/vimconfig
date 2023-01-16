@@ -131,14 +131,14 @@ nnoremap <leader><space> :nohlsearch <CR>
 "map <c-space> ?
 
 " Center to cursor after PageUp and PageDown
-nnoremap("<C-u>", "<C-u>zz")
-nnoremap("<C-d>", "<C-d>zz")
+nnoremap <C-u> <C-u>zz 
+nnoremap <C-d> <C-d>zz 
 
 " Center to cursor after searching next/prev
-nmap * *zz
-nmap # #zz
-nmap n nzz
-nmap N Nzz
+nnoremap * *zz
+nnoremap # #zz
+nnoremap n nzz
+nnoremap N Nzz
 
 " C-c and C-v - Copy/Paste to system clipboard
 " copy works in visual mode!
