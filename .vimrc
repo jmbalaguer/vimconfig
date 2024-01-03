@@ -166,12 +166,10 @@ map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
 
-" New tab
-nnoremap <C-t> <Esc>:tabnew<CR>
+" New tab window 
 nnoremap <leader>t <Esc>:tabnew<CR>
  
 " Show or hide file explorer
-nnoremap <C-f> <Esc>:Lex<CR>:vertical resize 30<CR> 
 nnoremap <leader>f <Esc>:Lex<CR>:vertical resize 30<CR>     
 
 
