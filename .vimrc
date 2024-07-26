@@ -71,7 +71,7 @@ colorscheme desert
 " characters for displaying non-printable characters
 set listchars=eol:$,tab:>-,trail:.,nbsp:_,extends:+,precedes:+
 
-set lines=43 columns=130
+set lines=43 columns=132
 
 " tuning for gVim only
 if has('gui_running')
@@ -79,7 +79,7 @@ if has('gui_running')
   "set background=light " light background for GUI (conflicts with colorscheme!)
   colorscheme desert  
   
-  set columns=140 lines=44 " GUI window geometry
+  set columns=132 lines=43 " GUI window geometry
 
   if has("gui_gtk2")
     set guifont=Inconsolata\ 12
@@ -130,6 +130,19 @@ nnoremap <leader><space> :nohlsearch <CR>
 " Map Ctrl-<Space> to ? (backwards search)
 "map <c-space> ?
 
+" New tab
+nnoremap <C-t> <Esc>:tabnew<CR>
+nnoremap <leader>t <Esc>:tabnew<CR>
+ 
+" Show or hide file explorer
+nnoremap <C-f> <Esc>:Lex<CR>:vertical resize 30<CR> 
+nnoremap <leader>f <Esc>:Lex<CR>:vertical resize 30<CR>     
+
+" Next/Previous buffer
+map <leader>n :bnext<CR>
+map <leader>p :bprevious<CR>
+map <leader>, :bprevious<CR>
+
 " Center to cursor after PageUp and PageDown
 nnoremap <C-u> <C-u>zz 
 nnoremap <C-d> <C-d>zz 
@@ -166,12 +179,6 @@ map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
 
-" New tab window 
-nnoremap <leader>t <Esc>:tabnew<CR>
- 
-" Show or hide file explorer
-nnoremap <leader>f <Esc>:Lex<CR>:vertical resize 30<CR>     
-
 
 " FUNCTION KEY MAPPINGS ===================================================================================  
 
@@ -192,14 +199,14 @@ function! SwitchColor(swinc)
   let s:swindex += a:swinc
   let s:swindex = s:swindex % (len(s:swcolors))
   execute "colorscheme " . s:swcolors[s:swindex]
-	redraw
-	execute "colorscheme"
+  redraw
+  execute "colorscheme"
 endfunction
 
- map <F8>        :call SwitchColor(1)<CR>
+map <F8> :call SwitchColor(1)<CR>
 imap <F8>   <Esc>:call SwitchColor(1)<CR>
 
- map <S-F8>      :call SwitchColor(-1)<CR>
+map <S-F8> :call SwitchColor(-1)<CR>
 imap <S-F8> <Esc>:call SwitchColor(-1)<CR>
 
 
