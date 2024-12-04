@@ -155,7 +155,8 @@ nnoremap N Nzz
 
 " C-c and C-v - Copy/Paste to system clipboard if Vim was compiled with clipboard support.
 " Check clipboard support with: 'vim --version' 
-" The literal '-xterm_clipboard' (with a minus prefix) means it has no support.
+" The text '-xterm_clipboard' (with a minus prefix) means it has no support. 
+" To have Vim with clipboard support: uninstall Vim, install gVim and use its console Vim.
 " ----------------------------------------------------------------------------------------
 " copy works in visual mode!
 " paste works in insert mode!
