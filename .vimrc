@@ -71,7 +71,7 @@ colorscheme desert
 " characters for displaying non-printable characters
 set listchars=eol:$,tab:>-,trail:.,nbsp:_,extends:+,precedes:+
 
-set lines=43 columns=132
+set lines=43 columns=128
 
 " tuning for gVim only
 if has('gui_running')
@@ -79,7 +79,7 @@ if has('gui_running')
   "set background=light " light background for GUI (conflicts with colorscheme!)
   colorscheme desert  
   
-  set columns=132 lines=43 " GUI window geometry
+  set columns=128 lines=43 " GUI window geometry
 
   if has("gui_gtk2")
     set guifont=Inconsolata\ 12
@@ -153,7 +153,10 @@ nnoremap # #zz
 nnoremap n nzz
 nnoremap N Nzz
 
-" C-c and C-v - Copy/Paste to system clipboard
+" C-c and C-v - Copy/Paste to system clipboard if Vim was compiled with clipboard support.
+" Check clipboard support with: "vim --version" 
+" The literal "-xterm_clipboard" (with a minus prefix) means it has no support.
+" ----------------------------------------------------------------------------------------
 " copy works in visual mode!
 " paste works in insert mode!
 vmap <C-c> "+yi
