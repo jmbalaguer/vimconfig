@@ -134,8 +134,7 @@ nnoremap <leader><space> :nohlsearch <CR>
 nnoremap <C-t> <Esc>:tabnew<CR>
 nnoremap <leader>t <Esc>:tabnew<CR>
  
-" Show or hide file explorer
-nnoremap <C-f> <Esc>:Lex<CR>:vertical resize 30<CR> 
+" Show or hide file explorer (do not use Ctrl-F!) 
 nnoremap <leader>f <Esc>:Lex<CR>:vertical resize 30<CR>     
 
 " Next/Previous buffer
