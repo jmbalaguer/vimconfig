@@ -71,7 +71,7 @@ colorscheme desert
 " characters for displaying non-printable characters
 set listchars=eol:$,tab:>-,trail:.,nbsp:_,extends:+,precedes:+
 
-set lines=43 columns=128
+set columns=132 lines=43 " Default window geometry
 
 " tuning for gVim only
 if has('gui_running')
@@ -79,7 +79,7 @@ if has('gui_running')
   "set background=light " light background for GUI (conflicts with colorscheme!)
   colorscheme desert  
   
-  set columns=128 lines=43 " GUI window geometry
+  set columns=132 lines=43 " GUI window geometry
 
   if has("gui_gtk2")
     set guifont=Inconsolata\ 12
@@ -95,7 +95,19 @@ endif
 set laststatus=2
 
 " Format the status line
-"set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l
+set statusline=
+set statusline+=b:%n " Buffer number
+set statusline+=\ %f " Filename (use %F for filepath)
+set statusline+=%m   " Modified flag
+set statusline+=%r   " Read only flag
+set statusline+=%=   " Switch to the right side
+set statusline+=\ %{&fileencoding?&fileencoding:&encoding}
+set statusline+=\ [%{&fileformat}\]
+"set statusline+=\ %y " [Filetype]
+set statusline+=\ %p%% " Percentage 
+set statusline+=\ \|\ %l:%c " Current line and column
+set statusline+=\ 
+
 
 " Highlight the Current Line
 set cursorline
